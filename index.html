@@ -42,5 +42,16 @@
             </div>
         </div>
     </section>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var navbarToggle = document.getElementById("navbarToggle");
+            var navbarCollapse = document.getElementById("navbarSupportedContent");
+    
+            navbarToggle.addEventListener("click", function () {
+                navbarCollapse.classList.toggle("show");
+            });
+        });
+    </script>
 </body>
 </html>
