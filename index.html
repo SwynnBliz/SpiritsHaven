@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Italiana' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
@@ -14,7 +14,7 @@
         <a href="index.html">
             <img src="images/HeaderLogo.png" alt="JC Studio Logo">
         </a>
-        <div class ="caption">
+        <div class="caption">
             <h2>EVENT PHOTOGRAPHY</h2>
             <p id="studio">by JC Photography Studio</p>
             <p>Capturing Moments, Creating Memories</p>
@@ -23,9 +23,11 @@
 
     <div class="navbar">
         <button class="menu-btn" onclick="toggleSidebar()">☰</button>
-        <a href="index.html" class="navlink" id="navlink-h">Home</a>
-        <a href="#" class="navlink">Services</a>
-        <a href="#" class="navlink">Gallery</a>
+        <div class="navlinks">
+            <a href="index.html" class="navlink" id="navlink-h">Home</a>
+            <a href="#" class="navlink">Services</a>
+            <a href="#" class="navlink">Gallery</a>
+        </div>
         <div class="sidebar" id="sidebar">
             <a href="index.html" id="sidemenu-btn" onclick="toggleSidebar()">☰</a>
             <a href="#">Home</a>
