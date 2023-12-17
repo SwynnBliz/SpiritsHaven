@@ -1,5 +1,5 @@
-# Studio
+# The Spirits Haven
 
-Portfolio Studio
+Spirits
 
 ***Website Link:*** swynnbliz.github.io/Studio/index.html
