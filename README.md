@@ -1,5 +1,5 @@
-# The Spirits Haven
+# JC Photography Studio
 
-Spirits
+Portfolio Website
 
-***Website Link:*** swynnbliz.github.io/SpiritsHaven/index.html
+***Website Link:*** swynnbliz.github.io/Studio/index.html
