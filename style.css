@@ -414,12 +414,12 @@ body {
         max-width: 100%;
         font-weight: lighter;
         text-align: justify;
-        font-size: 8px;
+        font-size: 10px;
         padding: 10px;
     }
 
     .img-slider #title {
-        font-size: 12px;
+        font-size: 14px;
         text-align: center;
         font-weight: bold;
     }
