@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------------------- Font Style Imports ------------------------->
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Italiana' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+    <!------------------------- Icon, css and title setting ------------------------->
+    <link rel="icon" href="images/LogoIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>JCP Studio</title>
+</head>
+<body>
+    <!------------------------- Header ------------------------->
+    <div class="header-container">
+        <a href="index.html">
+            <img class="header-logo" src="images/HeaderLogo.png" alt="JC Studio Logo">
+        </a>
+        <div class="caption">
+            <h2>EVENT PHOTOGRAPHY</h2>
+            <p id="studio">by JC Photography Studio</p>
+            <p>Capturing Moments, Creating Memories</p>
+        </div>
+    </div>
+
+    <!------------------------- Navigation Bar ------------------------->
+    <div class="navbar">
+        <button class="sidebarbtn" onclick="toggleSidebar()">☰</button>
+        <a href="#" class="navlink">Home</a>
+        <a href="#" class="navlink">Services</a>
+        <a href="#" class="navlink">Gallery</a>
+    <!------------------------- Side Navigation Bar ------------------------->
+        <div class="sidebar" id="sidebar">
+            <a href="#">    
+                <img id="sidebar-img" src="images/HomeIcon.png" alt="Home Icon">Home
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/GalleryIcon.png" alt="Gallery Icon">Gallery
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/AboutIcon.png" alt="About Icon">About
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/ServicesIcon.png" alt="Services Icon">Services
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/FeedbackIcon.png" alt="Feedback Icon">Feedback
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/FAQIcon.png" alt="FAQ Icon">FAQ
+            </a>
+        </div>
+    </div>
+
+    <!------------------------- Photoshoot Theme ------------------------->
+    <div class="photoshoot-container">
+        <div class="img-box">
+            <img src="images/Debut.png" alt="Birthday/Debut">
+            <p class="description">Birthday/Debut<br>Photoshoot</p>
+        </div>
+        <div class="img-box">
+            <img src="images/Wedding.png" alt="Wedding">
+            <p class="description">Wedding<br>Photoshoot</p>
+        </div>
+        <div class="img-box">
+            <img src="images/Holiday.png" alt="Holiday Theme">
+            <p class="description">Holiday Theme<br>Photoshoot</p>
+        </div>
+    </div>
+
+    <!------------------------- Image Editing Slider ------------------------->
+    <div class="img-slider">
+        <div class="description">
+            <p id="title">Enhanced Imaging: Professional Editing Services for Exceptional Photos and Videos</p><br>
+            <p id="info">&nbsp;&nbsp;We provide top-notch editing expertise in addition to our photography and 
+                videography services, enhancing the quality of your images and videos. Explore some 
+                popular editing filters by selecting a file from your storage. Use the slider button to 
+                compare the original image on the left with the filtered/edited version on the right. 
+                Additionally, you have the option to adjust the width for portrait images.
+            </p>
+            <br>
+            <!-- Input element to choose a file -->
+            <input type="file" id="origImgInput" accept="image/*"><br><br>
+            <button class="filter-btn" onclick="applyFilter(1)">Grayscale</button>
+            <button class="filter-btn" onclick="applyFilter(2)">Inverse</button>
+            <button class="filter-btn" onclick="applyFilter(3)">Blur</button>
+            <button class="filter-btn" onclick="applyFilter(4)">Sepia</button>
+            <br><br>
+            <!-- Input field for user to enter the width -->
+            <form class="resize-img" onsubmit="return false;">
+                <input type="number" id="imgWidthInput" placeholder="Enter width">
+                <button onclick="resizeImageContainer()">Resize</button>
+            </form>
+        </div>
+
+        <div class="img-container">
+            <!-- Edited image for comparison -->
+            <img id="editImg" src="images/SliderImgEdit.png" alt="Image Slider Edited">
+            <!-- Original image for comparison -->
+            <img id="origImg" src="images/SliderImg.png" alt="Image Slider Original">
+            <!-- Input range for additional functionality -->
+            <input type="range" min="0" max="100" value="50" id="slider" oninput="slide()">
+        </div>
+    </div>
+
+    <!------------------------- Photography Grid ------------------------->
+    <div class="image-grid">
+        <img src="images/photo1st.jpg" alt="1st Photo">
+        <img class="image-grid-row-2" src="images/photo2nd.jpg" alt="2nd Photo">
+        <img class="image-grid-row-2" src="images/photo3rd.jpg" 
+            alt="3rd Photo">
+        <img src="images/photo4th.jpg" alt="3rd Photo">
+    </div>
+    <div class="photo-view-container">
+        <a href="#" class="photo-view">View More</a>
+    </div>
+
+    <!------------------------- Footer ------------------------->
+    <div class="footer-wrapper">
+        <!-- Social Media -->
+        <div class="footer-social">
+            <div class="social-media">
+                <h2>Social Media</h2><br><br>
+                <a href="https://www.facebook.com/jcphotography11" target="_blank">
+                    <img src="images/FBIcon.png" alt="Facebook Icon">   
+                </a>
+            </div>
+        </div>
+        <!-- JCP Studio Logo -->
+        <div class="footer-logo-container">
+                <img id="footer-img" src="images/FooterLogo.png" alt="Footer Logo">
+        </div>
+        <!-- Contact Info -->
+        <div class="footer-contact">
+            <h2>Contact Us</h2><br>
+            <p>
+                +63977737S5223<br>
+                jcphotographystudio11@gmail.com<br>
+                Cabcaben, Mariveles, Philippines, 2105
+            </p>
+        </div>
+        <!-- Skip 1 Column so that Copyright is in the center -->
+        <div class="footer-empty"></div>
+        <!-- Copyright Info -->
+        <div class="copyright">
+            <p id="studio">
+                Event Photographer<br>
+                JCP Studio
+            </p><br>
+            <p>&#169 JCP STUDIOS 2023</p>
+        </div>
+        <!-- Back To Top Button -->
+        <div class="back-container">
+            <img id="back-img" src="images/BackIcon.png" alt="Back Icon"> 
+        </div>
+    </div>
+
+    <!------------------------- Script ------------------------->
+    <script src="script.js"></script>
+</body>
+</html>

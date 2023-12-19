@@ -1,0 +1,552 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: black;
+    height: 100vh;
+}
+
+/* <------------------------- Header -------------------------> */
+.header-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/HeaderBG.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+}
+
+.caption {
+    position: relative;
+    margin-left: -400px;
+    font-family: 'Italiana', sans-serif;
+    font-size: 10px;
+    color: white;
+}
+
+.caption #studio {
+    color: #D67809;
+}
+
+.caption h2 {
+    font-size: 20px;
+    font-weight: 100;
+    margin-bottom: -3px;
+}
+
+/* <------------------------- Navigation Bar -------------------------> */
+.navbar {
+    background-color: #060606;
+    padding: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    overflow: hidden;
+}
+
+.navlink {
+    font-family: 'Inter', sans-serif;
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    margin: 0px 45px;
+    text-decoration: none;
+}
+
+.sidebarbtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    margin-right: 30%;
+}
+
+.navlink:hover, .menu-btn:hover, #navlogo:hover {
+    background-color: #555;
+    border-radius: 50%;
+}
+
+/* <------------------------- Side Navigation Bar -------------------------> */
+.sidebar {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: #060606;
+    overflow-x: hidden;
+    transition: 400ms;
+    z-index: 2;
+}
+
+.sidebar a {
+    display: grid;
+    grid-template-columns: repeat(2, 45px);
+    padding: 25px 25px 25px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #555;
+}
+
+#sidebar-img {
+    margin-top: -10px;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+}
+
+/* <------------------------- Photoshoot Theme -------------------------> */
+.photoshoot-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #161616;
+}
+
+.img-box {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: white;
+    padding: 20px;
+}
+
+.img-box .description {
+    position: absolute;
+    color: white;
+    font-size: calc(1.5vw + 1vh);
+    font-weight: lighter;
+    bottom: 20px;
+    padding-left: 5px;
+}
+
+.img-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* <------------------------- Image Editing Slider -------------------------> */
+.img-slider {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.img-slider .description {
+    color: white;
+    max-width: 45%;
+    font-weight: lighter;
+    text-align: justify;
+    padding: 0px 10px;
+}
+
+.img-slider #title {
+    font-size: 22px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.filter-btn {
+    padding: 3px;
+    margin: 0px 8px 0px 0px;
+}
+
+.resize-img button {
+    padding: 3px;
+}
+
+.resize-img input {
+    margin-right: 6px;
+    padding: 3px;
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.img-container {
+    border: 1px solid black;
+    height: 67.5vmin;
+    width: 95vmin;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#origImg {
+    clip-path: polygon(0 0 , 50% 0, 50% 100%, 0 100%);
+}
+
+#slider {
+    position: relative;
+    -webkit-appearance: none;
+    width: calc(100% + 40px);
+    height: 100%;
+    margin-left: -20px;
+    background-color: transparent;
+    outline: none;
+}
+
+#slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 40px;
+    width: 40px;
+    background: url("images/Slider.png"), rgba(255,255,255,0.3);
+    border: 3px solid white;
+    border-radius: 50%;
+    background-size: contain;
+    cursor: pointer;
+}
+
+#result {
+    color: white;
+}
+
+#imgWidthInput {
+    width: 200px;
+}
+
+/* <------------------------- Photography Grid -------------------------> */
+.image-grid {
+    --gap: 16px 30px;
+    --num-cols: 2;
+    --row-height: 300px;
+    
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+}
+
+.image-grid > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} 
+
+.image-grid-col-2 {
+    grid-column: span 2;
+}
+
+.image-grid-row-2 {
+    grid-row: span 2;
+    object-position: center top;
+}
+
+.photo-view-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+
+.photo-view {
+    display: inline-block;
+    margin-top: -80px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for the button */
+.photo-view:hover {
+    background-color: white;
+    color: black;
+}
+
+/* <------------------------- Footer -------------------------> */
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    background-color: #F0ECE5;
+    height: 380px;
+    width: auto;
+    font-family: 'Inconsolata';
+    padding: 60px;
+    gap: 20px;
+}
+
+.social-media img {
+    margin-top: -20px;
+    margin-left: 50px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.footer-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer-img {
+    width: 320px;
+    height: 60px;
+}
+
+.footer-contact {
+    font-family: 'Inconsolata', sans-serif;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.copyright #studio {
+    font-size: 22px;
+}
+
+.back-container {
+    position: relative;
+}
+
+.back-container img {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* <------------------------- Responsiveness -------------------------> */
+/* Extra Small devices (phones) */
+@media only screen and (max-width: 600px) {
+    /* <------------------------- Header -------------------------> */
+    .header-container {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        background-image: url('images/HeaderBG.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 160px;
+    }
+
+    .header-logo {
+        height: 50px;
+        width: 180px;
+    }
+
+    .caption {
+        position: relative;
+        margin-left: -100px;
+        font-family: 'Italiana', sans-serif;
+        font-size: 10px;
+        color: white;
+    }
+
+    .caption #studio {
+        color: #D67809;
+    }
+
+    .caption h2 {
+        font-size: 14px;
+        font-weight: 100;
+        margin-bottom: -3px;
+    }
+    /* <------------------------- Navigation Bar -------------------------> */
+    .navbar {
+        padding: 12px 0px;
+    }
+    .navlink {
+        padding: 0px;
+        margin: 0px 15px;
+        font-size: 12px;
+    }
+    .sidebarbtn {
+        font-size: 20px;
+        margin-right: 19.5%;
+        margin-left: 2.5%;
+    }
+
+     /* <------------------------- Side Navigation Bar -------------------------> */   
+    .sidebar a {
+        padding: 20px 20px 20px 15px;
+        font-size: 15px;
+    }
+    #sidebar-img {
+        margin-top: -8px;
+        height: 25px;
+        width: 25px;
+    }
+
+    /* <------------------------- Image Editing Slider -------------------------> */
+    .img-slider {
+        flex-direction: column;
+    }
+
+    .img-slider .description {
+        max-width: 100%;
+        font-weight: lighter;
+        text-align: justify;
+        font-size: 8px;
+        padding: 10px;
+    }
+
+    .img-slider #title {
+        font-size: 12px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #origImgInput {
+        height: 20px;
+        width: 300px; 
+    }
+
+    .filter-btn {
+        height: 20px;
+        padding: 0px;
+    }
+
+    .resize-img button {
+        height: 20px;
+        padding: 0px;
+    }
+
+    .resize-img input {
+        margin-right: 2px;
+        padding: 0px;
+    }
+
+    .img-container {
+        height: 50vmin;
+        width: 85vmin;
+        margin: 2px;
+    } 
+
+    
+    @media screen and (max-width: 1024px) {
+        .image-grid {
+            --num-cols: 1;
+            --row-height: 160px;
+            
+        }
+    }
+
+     /* <------------------------- Footer -------------------------> */
+    .footer-wrapper {
+        padding: 15px;
+        height: 380px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .social-media {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+    }
+
+    .social-media img {
+        margin-left: 0px;
+        width: 20px;
+        height: 20px;
+    }
+
+    #footer-img {
+        width: 220px;
+        height: 66px;
+    }
+    
+    .footer-contact {
+        font-size: 12px;
+    }
+    
+    .copyright {
+        margin-top: -30px;
+        font-size: 12px;
+    }
+    
+    .copyright #studio {
+        font-size: 14px;
+    }
+    
+    .back-container img {
+        bottom: 50px;
+        right: 70px;
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Small devices (tablets)
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+    .navlink {
+        padding: 10px 40px;
+    }
+    .menu-btn {
+        margin-right: 20%;
+    }
+    .container {
+        grid-template-columns: repeat(2 , 1fr);
+    }
+    .img-box .description {
+        font-size: calc(2.5vw + 1vh);
+    }
+    .caption {
+        margin-left: -120px;
+    }
+}
+
+ Medium devices (laptops)
+@media only screen and (min-width: 769px) and (max-width: 1024px){
+    .navlink {
+        padding: 10px 50px;
+    }
+    .menu-btn {
+        margin-right: 25%;
+    }
+    .caption {
+        margin-left: -200px;
+    }
+}
+
+ Large devices (desktops)
+@media only screen and (min-width: 1025px) and (max-width: 1024px){
+    .navlink {
+        padding: 10px 50px;
+    }
+    .menu-btn {
+        margin-right: 25%;
+    }
+    .caption {
+        margin-left: -300px;
+    }
+}*/
