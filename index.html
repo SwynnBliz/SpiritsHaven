@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------------------- Font Style Imports ------------------------->
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+    <!------------------------- Icon, css and title setting ------------------------->
+    <link rel="icon" href="images/LogoIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>JCP Studio</title>
+</head>
+<body>
+    <!------------------------- Navigation Bar ------------------------->
+    <div class="navbar">
+        <button class="sidebarbtn" onclick="toggleSidebar()">☰</button>
+        <a href="#" class="navlink">Services</a>
+        <a href="#" class="navlink">
+            <img id="navlogo" src="images/NavLogo.png" alt="Navigation Logo">
+        </a>
+        <a href="#" class="navlink">Gallery</a>
+    <!------------------------- Side Navigation Bar ------------------------->
+        <div class="sidebar" id="sidebar">
+            <a href="#">    
+                <img id="sidebar-img" src="images/HomeIcon.png" alt="Home Icon">Home
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/GalleryIcon.png" alt="Gallery Icon">Gallery
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/AboutIcon.png" alt="About Icon">About
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/ServicesIcon.png" alt="Services Icon">Services
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/FeedbackIcon.png" alt="Feedback Icon">Feedback
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/FAQIcon.png" alt="FAQ Icon">FAQ
+            </a>
+        </div>
+    </div>
+
+    <!------------------------- Content (Where you place your code, you remove this) ------------------------->
+
+    <section id="content" style="height: 1600px"></section>
+
+
+    <!------------------------- Footer ------------------------->
+    <div class="footer-wrapper">
+        <!-- Social Media -->
+        <div class="footer-social">
+            <div class="social-media">
+                <h2>Social Media</h2><br>
+                <a href="https://www.facebook.com/jcphotography11" target="_blank">
+                    <img src="images/FBIcon.png" alt="Facebook Icon">   
+                </a>
+            </div>
+        </div>
+        <!-- JCP Studio Logo -->
+        <div class="footer-logo-container">
+                <img id="footer-img" src="images/FooterLogo.png" alt="Footer Logo">
+        </div>
+        <!-- Contact Info -->
+        <div class="footer-contact">
+            <h2>Contact Us</h2>
+            <p>
+                +63977737S5223<br>
+                jcphotographystudio11@gmail.com<br>
+                Cabcaben, Mariveles, Philippines, 2105
+            </p>
+        </div>
+        <!-- Skip 1 Column so that Copyright is in the center -->
+        <div class="footer-empty"></div>
+        <!-- Copyright Info -->
+        <div class="copyright">
+            <p id="studio">
+                Event Photographer<br>
+                JCP Studio
+            </p>
+            <p>&#169 JCP STUDIOS 2023</p>
+        </div>
+        <!-- Back To Top Button -->
+        <div class="back-container">
+            <img id="back-img" src="images/BackIcon.png" alt="Back Icon"> 
+        </div>
+    </div>
+
+    <!------------------------- Script ------------------------->
+    <script src="script.js"></script>
+</body>
+</html>
