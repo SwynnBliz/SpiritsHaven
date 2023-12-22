@@ -1,3 +1,4 @@
+/* |||||||||||||||||||| Index HTML |||||||||||||||||||| */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -48,6 +49,7 @@ body {
     right: 0;
     z-index: 200;
     overflow: hidden;
+    height: 65px;
 }
 
 .navlink {
@@ -70,7 +72,7 @@ body {
     margin-right: 30%;
 }
 
-.navlink:hover, .menu-btn:hover, #navlogo:hover {
+.navlink:hover {
     background-color: #555;
     border-radius: 50%;
 }
@@ -419,7 +421,7 @@ video:focus {
 }
 
 .meet-team-title {
-    font-family: 'Aref Ruqaa Ink', sans-serif;
+    font-family: 'Aref Ruqaa Ink';
     text-align: center;
     color: white;
     font-weight: lighter;
@@ -510,8 +512,102 @@ video:focus {
     cursor: pointer;
 }
 
-/* <------------------------- Responsiveness -------------------------> */
-/* Extra Small devices (phones) */
+
+
+
+
+
+/* |||||||||||||||||||| Team HTML |||||||||||||||||||| */
+/* <------------------------- Navigation Bar -------------------------> */
+#navlogo {
+    width: 180px;
+    height: 35px;
+}
+
+.navlink2 {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 5px 5px;
+    margin: 0px 45px;
+    text-decoration: none;
+}
+
+.sidebarbtn2 {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    margin-right: 22%;
+}
+
+.navlink2:hover, #navlogo:hover {
+    background-color: #555;
+    border-radius: 50%;
+}
+
+/* <------------------------- Team Meet -------------------------> */
+#team-meet-title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: lighter;
+    font-size: 32px;
+}
+
+.team-container {
+    --gap: 60px 30px;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+    position: relative;
+}
+
+.team-container > img {
+    grid-row: span 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 10px white;
+}
+
+.team-container > .team-info {
+    grid-row: span 2;
+    box-sizing: border-box;
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.team-info {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    color: white;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.team-info h1 {
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+.team-info h2 { 
+    font-size: 22px;
+}
+
+
+
+
+/* |||||||||||||||||||| Responsiveness |||||||||||||||||||| */
+/* <------------------------- Extra Small devices (phones) -------------------------> */
 @media only screen and (max-width: 600px) {
     /* <------------------------- Header -------------------------> */
     .header-container {
@@ -556,9 +652,23 @@ video:focus {
         margin: 0px 15px;
         font-size: 12px;
     }
+    .navlink2 {
+        padding: 0px;
+        margin: 0px 15px;
+        font-size: 12px;
+    }
+    #navlogo {
+        width: 90px;
+        height: 30px;
+    }
     .sidebarbtn {
         font-size: 20px;
         margin-right: 19.5%;
+        margin-left: 2.5%;
+    }
+    .sidebarbtn2 {
+        font-size: 20px;
+        margin-right: 15.5%;
         margin-left: 2.5%;
     }
 
@@ -680,7 +790,7 @@ video:focus {
         color: black;
     }
 
-     /* <------------------------- Footer -------------------------> */
+    /* <------------------------- Footer -------------------------> */
     .footer-container {
         padding: 15px;
         height: 380px;

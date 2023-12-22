@@ -1,66 +1,106 @@
-// Open/Close Side Navigation Bar
-function toggleSidebar() {
-    var sidebar = document.getElementById('sidebar');
-    
-    // For the smaller screens
-    if (window.matchMedia('(max-width: 600px)').matches) {
-        if (sidebar.style.width === '1500px') {
-            sidebar.style.width = '0';
-            sidebar.style.position = 'static';
-        } else {
-            sidebar.style.width = '150px';
-            sidebar.style.position = 'fixed';
-        }
-    } 
-    // For other larger screens
-    else {
-        if (sidebar.style.width === '250px') {
-            sidebar.style.width = '0';
-            sidebar.style.position = 'static'; 
+// <------------------------- Navigation Bar for Index/Home Page ------------------------->    
+    // Open/Close Side Navigation Bar
+    function toggleSidebar() {
+        var sidebar = document.getElementById('sidebar');
+        
+        // For the smaller screens
+        if (window.matchMedia('(max-width: 600px)').matches) {
+            if (sidebar.style.width === '1500px') {
+                sidebar.style.width = '0';
+                sidebar.style.position = 'static';
+            } else {
+                sidebar.style.width = '150px';
+                sidebar.style.position = 'fixed';
+            }
         } 
+        // For other larger screens
         else {
-            sidebar.style.width = '250px';
-            sidebar.style.position = 'fixed'; 
+            if (sidebar.style.width === '250px') {
+                sidebar.style.width = '0';
+                sidebar.style.position = 'static'; 
+            } 
+            else {
+                sidebar.style.width = '250px';
+                sidebar.style.position = 'fixed'; 
+            }
         }
     }
-}
 
-// Check scroll position to toggle fixed positioning for the navbar
-function handleScroll() {
-    var headerContainer = document.querySelector('.header-container');
-    var navbar = document.querySelector('.navbar-container');
-    
-    if (window.scrollY >= headerContainer.offsetHeight) {
-        navbar.style.position = 'fixed';
-        navbar.style.top = '0';
-    } else {
-        navbar.style.position = 'relative';
-        navbar.style.top = 'auto';
+    // Check scroll position to toggle fixed positioning for the navbar
+    function handleScroll() {
+        var headerContainer = document.querySelector('.header-container');
+        var navbar = document.querySelector('.navbar-container');
+        
+        if (window.scrollY >= headerContainer.offsetHeight) {
+            navbar.style.position = 'fixed';
+            navbar.style.top = '0';
+        } else {
+            navbar.style.position = 'relative';
+            navbar.style.top = 'auto';
+        }
     }
-}
 
-// Attach the handleScroll function to the scroll event
-window.addEventListener('scroll', handleScroll);
+    // Attach the handleScroll function to the scroll event
+    window.addEventListener('scroll', handleScroll);
 
-// Close Side Navigation Bar by clicking outside the container of Side Bar
-document.addEventListener('click', function (event) {
-    var sidebar = document.getElementById('sidebar');
-    var menuButton = document.querySelector('.sidebarbtn');
+    // Close Side Navigation Bar by clicking outside the container of Side Bar
+    document.addEventListener('click', function (event) {
+        var sidebar = document.getElementById('sidebar');
+        var menuButton = document.querySelector('.sidebarbtn');
 
-    // Check if the clicked element is not inside the sidebar or menu button
-    if (!sidebar.contains(event.target) && event.target !== menuButton) {
-        sidebar.style.width = '0';
+        // Check if the clicked element is not inside the sidebar or menu button
+        if (!sidebar.contains(event.target) && event.target !== menuButton) {
+            sidebar.style.width = '0';
+        }
+    });
+// <------------------------- Navigation Bar for Other Pages ------------------------->
+    // Open/Close Side Navigation Bar
+    // Open/Close Side Navigation Bar
+    function toggleSidebar2() {
+        var sidebar = document.getElementById('sidebar2');
+        
+        // For the smaller screens
+        if (window.matchMedia('(max-width: 600px)').matches) {
+            if (sidebar.style.width === '1500px') {
+                sidebar.style.width = '0';
+                sidebar.style.position = 'static';
+            } else {
+                sidebar.style.width = '150px';
+                sidebar.style.position = 'fixed';
+            }
+        } 
+        // For other larger screens
+        else {
+            if (sidebar.style.width === '250px') {
+                sidebar.style.width = '0';
+                sidebar.style.position = 'static'; 
+            } 
+            else {
+                sidebar.style.width = '250px';
+                sidebar.style.position = 'fixed'; 
+            }
+        }
     }
-});
 
-// Image slider
+    // Close Side Navigation Bar by clicking outside the container of Side Bar
+    document.addEventListener('click', function (event) {
+        var sidebar = document.getElementById('sidebar2');
+        var menuButton = document.querySelector('.sidebarbtn2');
+
+        // Check if the clicked element is not inside the sidebar or menu button
+        if (!sidebar.contains(event.target) && event.target !== menuButton) {
+            sidebar.style.width = '0';
+        }
+    });
+
+// <------------------------- Image Slider ------------------------->  
 function slide() {
     let slideValue = document.getElementById("slider").value;
     document.getElementById("origImg").style.clipPath = "polygon(0 0," + slideValue + "% 0," +
     slideValue + "% 100%, 0 100%)";
 }
 
-// Image Filtering
+// <------------------------- Image Filtering ------------------------->  
 document.addEventListener('DOMContentLoaded', function () {
     const origImgInput = document.getElementById('origImgInput');
     const origImg = document.getElementById('origImg');
@@ -168,7 +208,7 @@ function resizeImageContainer() {
     }
 }
 
-// Back To Top Functionality
+// <------------------------- Back To Top ------------------------->  
 document.addEventListener('DOMContentLoaded', function () {
     var backToTopBtn = document.getElementById('back-img');
 
@@ -186,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-// Videophotography Grid
+// <------------------------- Videography Grid ------------------------->  
 var videoPlayer = document.getElementById("videoPlayer");
 var myVideo = document.getElementById("myVideo");
 
