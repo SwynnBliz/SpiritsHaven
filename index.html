@@ -8,6 +8,8 @@
     <link href='https://fonts.googleapis.com/css?family=Italiana' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Aref Ruqaa Ink' rel='stylesheet'>
     <!------------------------- Icon, css and title setting ------------------------->
     <link rel="icon" href="images/LogoIcon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
@@ -27,12 +29,12 @@
     </div>
 
     <!------------------------- Navigation Bar ------------------------->
-    <div class="navbar">
+    <div class="navbar-container">
         <button class="sidebarbtn" onclick="toggleSidebar()">☰</button>
         <a href="#" class="navlink">Home</a>
         <a href="#" class="navlink">Services</a>
         <a href="#" class="navlink">Gallery</a>
-    <!------------------------- Side Navigation Bar ------------------------->
+        <!------------------------- Side Navigation Bar ------------------------->
         <div class="sidebar" id="sidebar">
             <a href="#">    
                 <img id="sidebar-img" src="images/HomeIcon.png" alt="Home Icon">Home
@@ -72,7 +74,7 @@
     </div>
 
     <!------------------------- Image Editing Slider ------------------------->
-    <div class="img-slider">
+    <div class="img-slider-container">
         <div class="description">
             <p id="title">Enhanced Imaging: Professional Editing Services for Exceptional Photos and Videos</p><br>
             <p id="info">&nbsp;&nbsp;We provide top-notch editing expertise in addition to our photography and 
@@ -107,19 +109,75 @@
     </div>
 
     <!------------------------- Photography Grid ------------------------->
-    <div class="image-grid">
-        <img src="images/photo1st.jpg" alt="1st Photo">
-        <img class="image-grid-row-2" src="images/photo2nd.jpg" alt="2nd Photo">
-        <img class="image-grid-row-2" src="images/photo3rd.jpg" 
-            alt="3rd Photo">
-        <img src="images/photo4th.jpg" alt="3rd Photo">
+    <div class="photographygrid-container">
+        <h2 id="photogrid-title">Photography</h2>
+        <div class="image-grid">
+            <img src="images/photo1st.jpg" alt="1st Photo">
+            <img class="image-grid-row-2" src="images/photo2nd.jpg" alt="2nd Photo">
+            <img class="image-grid-row-2" src="images/photo3rd.jpg" 
+                alt="3rd Photo">
+            <img src="images/photo4th.jpg" alt="3rd Photo">
+        </div>
+        <div class="photo-view-container">
+            <a href="#" class="photo-view">View More</a>
+        </div>
     </div>
-    <div class="photo-view-container">
-        <a href="#" class="photo-view">View More</a>
+
+    <!------------------------- Videography Grid ------------------------->
+    <div class="videographygrid-container">
+        <h2 id="videogrid-title">Videography</h2>
+        <div class="video-grid">
+                <div class="video-img-container">
+                    <img class="video-img" src="images/Videoframe1st.png">
+                    <img src="images/PlayButton.png" class="play-btn" onclick="playVideo('videos/Video1st.mp4')">
+                </div>
+                <div class="video-img-container">
+                    <img class="video-img" src="images/Videoframe2nd.png">
+                    <img src="images/PlayButton.png" class="play-btn" onclick="playVideo('videos/Video2nd.mp4')">
+                </div>
+                <div class="video-img-container">
+                    <img class="video-img" src="images/Videoframe3rd.png">
+                    <img src="images/PlayButton.png" class="play-btn" onclick="playVideo('videos/Video3rd.mp4')">
+                </div>
+                <div class="video-img-container">
+                    <img class="video-img" src="images/Videoframe4th.png">
+                    <img src="images/PlayButton.png" class="play-btn" onclick="playVideo('videos/Video4th.mp4')">
+                </div>
+        </div>
+
+        <div class="video-player" id="videoPlayer">
+            <video width="100%" controls autoplay id="myVideo">
+                <source src="videos/Video1st.mp4" type="video/mp4">
+                Your browser does not support mp4 videos.
+            </video>
+            <img src="images/CloseButton.png" class="close-btn" onclick="stopVideo()">
+        </div>
+    
+        <div id="videoPopup" class="video-popup">
+            <div class="video-popup-content">
+                <video width="100%" controls autoplay id="popupVideo">
+                    <source src="videos/Video1st.mp4" type="video/mp4">
+                    Your browser does not support mp4 videos.
+                </video>
+                <img src="images/CloseButton.png" class="close-btn" onclick="closePopup()">
+            </div>
+        </div>
+
+        <div class="video-view-container">
+            <a href="#" class="video-view">View More</a>
+        </div>
+    </div>
+
+    <!------------------------- Meet The Team ------------------------->
+    <div class="meet-the-team-container">
+        <div class="meet-team-container">
+            <h2 class="meet-team-title">LETS CREATE SOMETHING MEMORABLE</h2>
+            <a href="#" class="meet-team">Meet the Team</a>
+        </div>
     </div>
 
     <!------------------------- Footer ------------------------->
-    <div class="footer-wrapper">
+    <div class="footer-container">
         <!-- Social Media -->
         <div class="footer-social">
             <div class="social-media">

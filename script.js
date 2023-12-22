@@ -1,19 +1,34 @@
 // Open/Close Side Navigation Bar
 function toggleSidebar() {
     var sidebar = document.getElementById('sidebar');
-    if (sidebar.style.width === '250px') {
-        sidebar.style.width = '0';
-        sidebar.style.position = 'static'; // Reset position when closing
-    } else {
-        sidebar.style.width = '250px';
-        sidebar.style.position = 'fixed'; // Set position to fixed when opening
+    
+    // For the smaller screens
+    if (window.matchMedia('(max-width: 600px)').matches) {
+        if (sidebar.style.width === '1500px') {
+            sidebar.style.width = '0';
+            sidebar.style.position = 'static';
+        } else {
+            sidebar.style.width = '150px';
+            sidebar.style.position = 'fixed';
+        }
+    } 
+    // For other larger screens
+    else {
+        if (sidebar.style.width === '250px') {
+            sidebar.style.width = '0';
+            sidebar.style.position = 'static'; 
+        } 
+        else {
+            sidebar.style.width = '250px';
+            sidebar.style.position = 'fixed'; 
+        }
     }
 }
 
 // Check scroll position to toggle fixed positioning for the navbar
 function handleScroll() {
     var headerContainer = document.querySelector('.header-container');
-    var navbar = document.querySelector('.navbar');
+    var navbar = document.querySelector('.navbar-container');
     
     if (window.scrollY >= headerContainer.offsetHeight) {
         navbar.style.position = 'fixed';
@@ -170,3 +185,34 @@ document.addEventListener('DOMContentLoaded', function () {
         document.documentElement.scrollTop = 0;
     });
 });
+
+// Videophotography Grid
+var videoPlayer = document.getElementById("videoPlayer");
+var myVideo = document.getElementById("myVideo");
+
+function stopVideo() {
+    videoPlayer.style.display = "none";
+}
+
+function playVideo(file) {
+    openPopupVideo(file);
+}
+
+function openPopupVideo(file) {
+    var popupVideo = document.getElementById("popupVideo");
+    popupVideo.muted = false;
+    popupVideo.src = file;
+    
+    var videoPopup = document.getElementById("videoPopup");
+    videoPopup.style.display = "block";
+}
+
+function closePopup() {
+    var videoPopup = document.getElementById("videoPopup");
+    var popupVideo = document.getElementById("popupVideo");
+
+    popupVideo.pause();
+    popupVideo.muted = true;
+
+    videoPopup.style.display = "none";
+}
