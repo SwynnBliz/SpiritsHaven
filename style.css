@@ -518,7 +518,7 @@ video:focus {
 
 
 /* |||||||||||||||||||| Team HTML |||||||||||||||||||| */
-/* <------------------------- Navigation Bar -------------------------> */
+/* <------------------------- Navigation Bar (Version 2) -------------------------> */
 #navlogo {
     width: 180px;
     height: 35px;
@@ -603,12 +603,154 @@ video:focus {
     font-size: 22px;
 }
 
+/* <------------------------- Footer -------------------------> */
+.footer-container2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    background-color: #D3D3D3;
+    height: 650px;
+    width: auto;
+    font-family: 'Montserrat', sans-serif;
+    padding: 60px;
+    gap: 20px;
+}
+
+.footer-social-container {
+    padding: 30px;
+    border-radius: 5%;
+    background-color: #FFFFFF;
+}
+
+.social-media-container {
+    margin-top: 80px;
+}
+
+.footer-social-container h2 {
+    font-size: 26px;
+    text-align: center;
+}
+
+.footer-social-container p {
+    margin-top: 60px;
+}
+
+.footer-social-container img {
+    margin-top: 0px;
+    margin-left: 45%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.location-container {
+    padding: 30px;
+    margin-top: 80px;
+}
+
+.location-container h2 {
+    font-size: 22px;
+    text-align: center;
+}
+
+.location-container p {
+    font-size: 22px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.location-container img {
+    width: 100%;
+    height: auto;
+}
+
+.back-container2 {
+    position: relative;
+}
+
+.back-container2 img {
+    position: absolute;
+    bottom: -90px;
+    right: 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+
+
+/* |||||||||||||||||||| Services HTML |||||||||||||||||||| */
+/* <------------------------- Our Services -------------------------> */
+#our-services-title {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: lighter;
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.services-title {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: lighter;
+    font-size: 28px;
+    padding: 0px 40px;
+    margin-bottom: -40px;
+}
+
+.services-container {
+    --gap: 60px 30px;
+    --row-height: 300px;
+
+    box-sizing: border-box;
+    padding: var(--gap);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+    position: relative;
+    margin-bottom: 80px;
+}
+
+.services-container > img {
+    grid-row: span 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 0 10px white;
+}
+
+.services-container > .services-info {
+    grid-row: span 2;
+    box-sizing: border-box;
+    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.services-info {
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    color: white;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.services-info h1 {
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+
 
 
 
 /* |||||||||||||||||||| Responsiveness |||||||||||||||||||| */
 /* <------------------------- Extra Small devices (phones) -------------------------> */
 @media only screen and (max-width: 600px) {
+    /* |||||||||||||||||||| Index HTML |||||||||||||||||||| */
     /* <------------------------- Header -------------------------> */
     .header-container {
         display: grid;
@@ -643,6 +785,7 @@ video:focus {
         font-weight: 100;
         margin-bottom: -3px;
     }
+
     /* <------------------------- Navigation Bar -------------------------> */
     .navbar-container {
         padding: 12px 0px;
@@ -835,7 +978,145 @@ video:focus {
         width: 25px;
         height: 25px;
     }
+
+
+
+
+
+    /* |||||||||||||||||||| Team HTML |||||||||||||||||||| */
+    /* <------------------------- Team Meet -------------------------> */
+    #team-meet-title {
+        font-size: 16px;
+        margin-bottom: -20px;
+    }
+
+    .team-container {
+        --gap: 35px 30px;
+        --row-height: 240px;
+    }
+
+    .team-container > img {
+        grid-row: span 1;
+    }
+
+    .team-container > .team-info {
+        grid-row: span 1;
+        padding: 0px; 
+    }
+
+    .team-info {
+        font-size: 8px;
+    }
+
+    .team-info h1 {
+        font-weight: lighter;
+        font-size: 9px;
+    }
+
+    .team-info h2 { 
+        font-size: 10px;
+    }
+
+    /* <------------------------- Footer -------------------------> */
+    .footer-container2 {
+        grid-template-columns: repeat(1, 1fr);
+        height: 580px;
+        padding: 20px;
+    }
+
+    .footer-social-container {
+        margin-bottom: -65px;
+    }
+
+    .social-media-container {
+        margin-top: 20px;
+        margin-bottom: -20px;
+    }
+
+    .footer-social-container h2 {
+        font-size: 12px;
+    }
+
+    .footer-social-container p {
+        font-size: 10px;
+        margin-top: 20px;
+    }
+
+    .footer-social-container img {
+        margin-top: -80%;
+        margin-left: 47%;
+        width: 20px;
+        height: 20px;
+    }
+
+    .location-container {
+        padding: 0px;
+        margin-top: 80px;
+    }
+
+    .location-container h2 {
+        font-size: 12px;
+    }
+
+    .location-container p {
+        font-size: 12px;
+    }
+
+    .back-container2 img {
+        bottom: -20px;
+        right: 10px;
+        width: 25px;
+        height: 25px;
+    }
+
+
+
+
+
+    /* |||||||||||||||||||| Services HTML |||||||||||||||||||| */
+    /* <------------------------- Our Services -------------------------> */
+    #our-services-title {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .services-title {
+        font-size: 12.5px;
+        margin-bottom: 10px;
+    }
+
+    .services-container {
+        --gap: 5px 30px;
+        --row-height: 240px;
+    }
+
+    .services-container  > img {
+        grid-row: span 1;
+    }
+
+    .services-container  > .services-info {
+        grid-row: span 1;
+        padding: 0px; 
+    }
+
+    .services-info {
+        font-size: 8px;
+    }
+
+    .services-info h1 {
+        font-weight: lighter;
+        font-size: 9px;
+    }
+
+    .services-info h2 { 
+        font-size: 10px;
+    }
 }
+
+
+
+
+
 
 /* Small devices (tablets)
 @media only screen and (min-width: 601px) and (max-width: 768px) {
