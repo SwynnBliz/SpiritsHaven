@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!------------------------- Font Style Imports ------------------------->
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet'>
+    <!------------------------- Icon, css and title setting ------------------------->
+    <link rel="icon" href="images/LogoIcon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>JCP Studio</title>
+</head>
+<body>
+    <!------------------------- Navigation Bar ------------------------->
+    <div class="navbar-container">
+        <button class="sidebarbtn2" onclick="toggleSidebar2()">☰</button> <!-- Added 2 -->
+        <a href="services.html" class="navlink2">Services</a> <!-- Added 2 -->
+        <a href="index.html" class="navlink2"> <!-- Added 2 -->
+            <img id="navlogo" src="images/NavLogo.png" alt="Navigation Logo">
+        </a>
+        <a href="#" class="navlink2">Gallery</a> <!-- Added 2 -->
+    <!------------------------- Side Navigation Bar ------------------------->
+        <div class="sidebar" id="sidebar2"> <!-- Added 2 -->
+            <a href="index.html">    
+                <img id="sidebar-img" src="images/HomeIcon.png" alt="Home Icon">Home
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/GalleryIcon.png" alt="Gallery Icon">Gallery
+            </a>
+            <a href="team.html">
+                <img id="sidebar-img" src="images/AboutIcon.png" alt="About Icon">About
+            </a>
+            <a href="services.html">
+                <img id="sidebar-img" src="images/ServicesIcon.png" alt="Services Icon">Services
+            </a>
+            <a href="#">
+                <img id="sidebar-img" src="images/FeedbackIcon.png" alt="Feedback Icon">Feedback
+            </a>
+            <a href="faq.html">
+                <img id="sidebar-img" src="images/FAQIcon.png" alt="FAQ Icon">FAQ
+            </a>
+        </div>
+    </div>
+
+    <!------------------------- Empty Navbar Placeholder ------------------------->
+    <section id="navbar-placeholder" style="height: 100px"></section>
+
+    <!------------------------- FAQ Section ------------------------->
+    <h2 id="faq-title">FAQ (Frequently Asked Questions)</h2>
+    <div class="faq-container">
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: What services does JC Photography Studio offer?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>JC Photography Studio offers professional photography, videography, and editing services 
+                    for a wide range of events, including weddings, debut, birthdays, and other events.</p>
+            </div>
+        </div>
+
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: How can I contact JC Photography Studio?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>You can contact us via phone at 09777375223 or by email at jcphotographystudio11@gmail.com. 
+                    Our office is also open for in-person consultations by appointment.</p>
+            </div>
+        </div>
+
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: What makes JC Photography Studio unique?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>What sets us apart is our commitment to capturing unique and authentic moments, utilizing 
+                    state-of-the-art equipment, and providing personalized services tailored to each client's 
+                    needs.</p>
+            </div>
+        </div>
+
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: Do you offer a consultation before booking?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, we offer complimentary consultations to discuss your specific requirements, answer 
+                    any questions, and ensure we understand your vision for the event.</p>
+            </div>
+        </div>
+
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: How do I book a photography session with JC Photography Studio?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>To book a session, simply visit our facebook page at https://www.facebook.com/jcphotography11 
+                    and message us the details. We'll get in touch with you to discuss details and confirm 
+                    availability.</p>
+            </div>
+        </div>
+
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: Do you provide videography services?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, we offer professional videography services to capture the essence of your event. Our team 
+                    uses the latest equipment to produce cinematic and memorable videos.</p>
+            </div>
+        </div>
+
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: Can I customize my videography package?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>Absolutely! We understand that each event is unique. We offer customizable videography packages 
+                    to suit your specific needs and preferences.</p>
+            </div>
+        </div>
+
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: Do you offer editing services for photos and videos?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>Yes, we provide professional editing services to enhance the quality of both photos and videos. 
+                    Our team ensures a polished and cohesive final product.</p>
+            </div>
+        </div>
+
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: Can I request specific edits or enhancements?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>Certainly! We welcome your input and specific requests for edits. Our goal is to deliver a 
+                    product that aligns with your vision and expectations.</p>
+            </div>
+        </div>
+
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: How long does the editing process take?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>The editing timeline depends on the scope of the project. We aim to deliver a preview of edited 
+                    images within 2 - 3 days and the final edited collection within a week.</p>
+            </div>
+        </div>
+
+        <div class="faq-qa-container">
+            <div class="faq-question">
+                <p>Q: What software do you use for editing?</p>
+                <button class="faq-toggle-btn" onclick="toggleAnswer(this)">
+                    <img src="images/dropdown.png" alt="Dropdown Button">
+                </button>
+            </div>
+            <div class="faq-answer">
+                <p>We use industry-standard editing software to ensure the highest quality output. Our team is 
+                    proficient in Preimere Pro for both photo and video editing.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!------------------------- Footer ------------------------->
+    <div class="footer-container">
+        <div class="footer-social">
+            <div class="social-media">
+                <h2>Social Media</h2><br><br>
+                <a href="https://www.facebook.com/jcphotography11" target="_blank">
+                    <img src="images/FBIcon.png" alt="Facebook Icon">   
+                </a>
+            </div>
+        </div>
+        <div class="footer-logo-container">
+                <img id="footer-img" src="images/FooterLogo.png" alt="Footer Logo">
+        </div>
+        <div class="footer-contact">
+            <h2>Contact Us</h2>
+            <p>
+                +63977737S5223<br>
+                jcphotographystudio11@gmail.com<br>
+                Cabcaben, Mariveles, Philippines, 2105
+            </p>
+        </div>
+        <div class="footer-empty"></div>
+        <div class="copyright">
+            <p id="studio">
+                Event Photographer<br>
+                JCP Studio
+            </p>
+            <p>&#169 JCP STUDIOS 2023</p>
+        </div>
+        <div class="back-container">
+            <img id="back-img" src="images/BackIcon.png" alt="Back Icon"> 
+        </div>
+    </div>
+
+    <!------------------------- Script ------------------------->
+    <script src="script.js"></script>
+</body>
+</html>

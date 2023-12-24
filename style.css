@@ -603,7 +603,7 @@ video:focus {
     font-size: 22px;
 }
 
-/* <------------------------- Footer -------------------------> */
+/* <------------------------- Footer (Version 2) -------------------------> */
 .footer-container2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -744,6 +744,72 @@ video:focus {
 }
 
 
+
+
+
+/* |||||||||||||||||||| FAQ Page |||||||||||||||||||| */
+/* <------------------------- FAQ Section -------------------------> */
+#faq-title {
+    text-align: center;
+    font-family: 'Montserrat';
+    color: white;
+    font-weight: lighter;
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.faq-qa-container {
+    margin: 40px 0px;
+    text-align: justify;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d7d3d1e7;
+    padding: 10px 30px;
+    color: black;
+    border-radius: 2em;
+    width: 800px;
+}
+
+.faq-toggle-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    background-color: #D7D3D1;
+    border-radius: 0 0 2em 2em;
+    color: black;
+    min-height: 80px;
+    width: 800px;
+}
+
+.faq-answer.show {
+    display: block;
+}
 
 
 
@@ -1111,8 +1177,49 @@ video:focus {
     .services-info h2 { 
         font-size: 10px;
     }
-}
 
+
+
+
+
+    /* |||||||||||||||||||| FAQ Page |||||||||||||||||||| */
+    /* <------------------------- FAQ Section -------------------------> */
+    #faq-title {
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .faq-container {
+        margin-bottom: 20px;
+    }
+
+    .faq-qa-container {
+        margin: 30px 0px;
+        font-size: 11px;
+    }
+
+    .faq-question {
+        padding: 10px 20px;
+        width: 400px;
+    }
+
+    .faq-toggle-btn {
+        width: 30px;
+        height: 30px;
+    }
+
+    .faq-toggle-btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .faq-answer {
+        padding-top: 15px;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 400px;
+    }
+}
 
 
 

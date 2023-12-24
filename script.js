@@ -256,3 +256,20 @@ function closePopup() {
 
     videoPopup.style.display = "none";
 }
+
+// <------------------------- FAQ Dropdown ------------------------->
+function toggleAnswer(button) {
+    var answer = button.parentElement.nextElementSibling;
+    answer.classList.toggle('show');
+
+    // Get the question container
+    var questionContainer = button.parentElement;
+
+    // Set border radius based on whether the answer is shown or not
+    if (answer.classList.contains('show')) {
+        questionContainer.style.borderRadius = '2em 2em 0 0';
+    } else {
+        // Reset border radius when closing the answer
+        questionContainer.style.borderRadius = '2em';
+    }
+}
